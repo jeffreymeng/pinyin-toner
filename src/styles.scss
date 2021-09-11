@@ -1,0 +1,41 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* https://stackoverflow.com/a/3525675/5511561 */
+
+html,
+body {
+	margin: 0px;
+	padding: 0px;
+	min-height: 100%;
+	height: 100%;
+}
+
+.container {
+	min-height: 100%;
+	height: auto !important;
+	margin-bottom: -50px;
+	/* the bottom margin is the negative value of the footer's total height */
+}
+
+.container:after {
+	content: "";
+	display: block;
+	height: 50px;
+	/* the footer's total height */
+}
+
+.footer {
+	height: 50px;
+	/* the footer's total height */
+}
+
+.footer-content {
+	height: 32px;
+	/* height + top/bottom padding + top/bottom border must add up to footer height */
+	padding: 8px;
+}
+
+#text {
+	min-height: 80vh;
+	font-size: 1.5em !important;
+}
